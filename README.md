@@ -72,7 +72,7 @@ ls
 ### 3️⃣ Build Docker Image
 
 ```bash
-docker build -t docker.io/atuljkamble/pythonhelloworld .
+docker buildx build -t docker.io/atuljkamble/pythonhelloworld --load .
 ```
 
 Check Docker images:
