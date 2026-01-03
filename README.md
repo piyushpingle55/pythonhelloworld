@@ -55,7 +55,7 @@ touch Dockerfile
 Edit and add the following content:
 
 ```Dockerfile
-FROM python:latest
+FROM python:3.12-slim
 WORKDIR /app
 COPY helloworld.py .
 CMD ["python", "helloworld.py"]
