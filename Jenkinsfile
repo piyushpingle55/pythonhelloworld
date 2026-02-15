@@ -1,4 +1,4 @@
- pipeline {
+pipeline {
     agent any
 
     stages {
@@ -7,16 +7,13 @@
                 git branch: 'main', url: 'https://github.com/piyushpingle55/pythonhelloworld.git'
             }
         }
+
         stage('Build Docker Image') {
-             steps {
-                script {
-                    echo 'Next step is Docker Image to be build'
-                }
-            }
             steps {
                 script {
+                    echo 'Next step is Docker Image to be build'
                     dockerImage = docker.build('python-hello-world')
-                    echo 'Docker Image build suceesfull'
+                    echo 'Docker Image build successful'
                 }
             }
         }
