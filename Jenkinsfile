@@ -7,8 +7,12 @@
                 git branch: 'main', url: 'https://github.com/piyushpingle55/pythonhelloworld.git'
             }
         }
-
         stage('Build Docker Image') {
+             steps {
+                script {
+                    echo 'Next step is Docker Image to be build'
+                }
+            }
             steps {
                 script {
                     dockerImage = docker.build('python-hello-world')
